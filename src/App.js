@@ -10,9 +10,9 @@ function App() {
     { path: "/diorama", element: <Diorama /> },
   ]);
   return (
-    <div className="w-full h-full">
+    <main className="w-full h-full">
       <RouterProvider router={router} />
-    </div>
+    </main>
   );
 }
 

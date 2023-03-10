@@ -26,6 +26,7 @@ import Words from "../components/diorama/Words";
 import SceneParticles from "../components/diorama/SceneParticles";
 import Tiger from "../components/diorama/Tiger";
 import Girl from "../components/diorama/Girl";
+import { ReactComponent as Arrow } from "../assets/chevronArrow.svg";
 
 let lightColor = new Color(1, 0.2, 0.1);
 let mesh = new Mesh(
@@ -43,10 +44,22 @@ mesh.scale.set(1.5, 1, 1);
 const Diorama = ({ width = "100%", height = "100%" }) => {
   return (
     <section className="h-full w-full bg-black opacity-90 p-12">
+      <div
+        className="absolute top-[20px] left-[20px] w-[80px] h-[80px] bg-white rounded-full border-1 border-pink-200 shadow-sm shadow-pink-100 z-10 grid place-items-center routeBox cursor-pointer"
+        onClick={() => window.open("/", "_self")}
+      >
+        <Arrow
+          fill="white"
+          width={40}
+          height={40}
+          stroke="white"
+          className="rotate-180 mr-2"
+        />
+      </div>
       <Canvas
         shadows
         style={{ width: width, height: height }}
-        className="border border-pink-200 rounded-lg shadow-lg shadow-pink-100"
+        className="border border-pink-200 rounded-2xl rounded-tl-[200px] shadow-lg shadow-pink-100"
       >
         <Suspense fallback={null}>
           <Environment

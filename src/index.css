@@ -11,3 +11,22 @@ canvas {
   margin: 0;
   overflow: hidden;
 }
+
+.routeBox {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+}
+
+/* .routeText {
+  background: -webkit-linear-gradient(#a15389, #551053);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 3px #a15389);
+} */
+
+.routeBox:hover {
+  background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+}
