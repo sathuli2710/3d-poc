@@ -20,11 +20,40 @@ canvas {
   );
 }
 
-/* .routeText {
-  background: -webkit-linear-gradient(#a15389, #551053);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(1px 1px 3px #a15389);
+/* @media screen and (max-width: 767px) {
+  .routeBox {
+    font-size: 10px;
+  }
+  .routeBox:hover {
+    font-size: 30px;
+  }
+} */
+
+/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .routeBox {
+    font-size: 20px;
+  }
+  .routeBox:hover {
+    font-size: 40px;
+  }
+} */
+
+/* @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .routeBox {
+    font-size: 20px;
+  }
+  .routeBox:hover {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .routeBox {
+    font-size: 40px;
+  }
+  .routeBox:hover {
+    font-size: 60px;
+  }
 } */
 
 .routeBox:hover {

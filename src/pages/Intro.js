@@ -11,7 +11,7 @@ const Intro = () => {
         {routes.map((item, idx) => (
           <section
             key={idx}
-            className="cursor-pointer w-[500px] h-[500px] border border-pink-200 rounded-lg shadow-lg shadow-pink-100 grid place-items-center text-[40px] hover:text-[60px] font-extrabold uppercase routeBox transition-colors ease-in-out duration-700"
+            className="cursor-pointer xl:w-[500px] xl:h-[500px] l:w-[400px] l:h-[400px] m:w-[300px] m:h-[300px] s:w-[100px] s:h-[100px] l:text-[45px] xl:text-[50px] xl:hover:text-[40px] l:hover:text-[60px] m:text-[30px] m:hover:text-[45px] s:text-[10px] s:hover:text-[15px] border border-pink-200 rounded-lg shadow-lg shadow-pink-100 grid place-items-center font-extrabold uppercase routeBox transition-colors ease-in-out duration-700"
             onClick={() => window.open(item.route, "_self")}
           >
             {item.text}

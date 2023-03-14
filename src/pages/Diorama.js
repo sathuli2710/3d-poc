@@ -3,8 +3,8 @@ import {
   PerspectiveCamera,
   Environment,
   Float,
-  Html,
-  useProgress,
+  // Html,
+  // useProgress,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -26,8 +26,8 @@ import Rocks from "../components/diorama/Rocks";
 import Trees from "../components/diorama/Trees";
 import Words from "../components/diorama/Words";
 import SceneParticles from "../components/diorama/SceneParticles";
-import Tiger from "../components/diorama/Tiger";
-import Girl from "../components/diorama/Girl";
+// import Tiger from "../components/diorama/Tiger";
+// import Girl from "../components/diorama/Girl";
 import { ReactComponent as Arrow } from "../assets/chevronArrow.svg";
 
 let lightColor = new Color(1, 0.2, 0.1);
@@ -43,11 +43,11 @@ mesh.rotation.x = Math.PI * 0.5;
 mesh.position.set(1.17, 10.7, -4.1);
 mesh.scale.set(1.5, 1, 1);
 
-function Loader() {
-  const { active, progress, errors, item, loaded, total } = useProgress();
-  // console.log("Hello : ", <Html>{progress} % loaded</Html>);
-  return <Html>{progress} % loaded</Html>;
-}
+// function Loader() {
+//   const { active, progress, errors, item, loaded, total } = useProgress();
+//   // console.log("Hello : ", <Html>{progress} % loaded</Html>);
+//   return <Html>{progress} % loaded</Html>;
+// }
 
 const Diorama = ({ width = "100%", height = "100%" }) => {
   return (
@@ -69,7 +69,7 @@ const Diorama = ({ width = "100%", height = "100%" }) => {
         style={{ width: width, height: height }}
         className="border border-pink-200 rounded-2xl rounded-tl-[200px] shadow-lg shadow-pink-100"
       >
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={null}>
           <Environment
             background={"only"}
             files={process.env.PUBLIC_URL + "/textures/bg.hdr"}
