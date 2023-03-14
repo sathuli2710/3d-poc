@@ -3,6 +3,8 @@ import {
   PerspectiveCamera,
   Environment,
   Float,
+  Html,
+  useProgress,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -41,6 +43,12 @@ mesh.rotation.x = Math.PI * 0.5;
 mesh.position.set(1.17, 10.7, -4.1);
 mesh.scale.set(1.5, 1, 1);
 
+function Loader() {
+  const { active, progress, errors, item, loaded, total } = useProgress();
+  // console.log("Hello : ", <Html>{progress} % loaded</Html>);
+  return <Html>{progress} % loaded</Html>;
+}
+
 const Diorama = ({ width = "100%", height = "100%" }) => {
   return (
     <section className="h-full w-full bg-black opacity-90 p-12">
@@ -61,7 +69,7 @@ const Diorama = ({ width = "100%", height = "100%" }) => {
         style={{ width: width, height: height }}
         className="border border-pink-200 rounded-2xl rounded-tl-[200px] shadow-lg shadow-pink-100"
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Environment
             background={"only"}
             files={process.env.PUBLIC_URL + "/textures/bg.hdr"}

@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { CarShow } from "../components/threedshow/CarShow";
 import { ReactComponent as Arrow } from "../assets/chevronArrow.svg";
+import Loader from "../components/diorama/Loader";
 
 const ThreeDShow = ({ width = "100%", height = "100%" }) => {
   return (
@@ -18,7 +19,7 @@ const ThreeDShow = ({ width = "100%", height = "100%" }) => {
           className="rotate-180 mr-2"
         />
       </div>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <Canvas
           shadows
           style={{ width: width, height: height }}
