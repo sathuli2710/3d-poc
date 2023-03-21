@@ -26,8 +26,8 @@ import Rocks from "../components/diorama/Rocks";
 import Trees from "../components/diorama/Trees";
 import Words from "../components/diorama/Words";
 import SceneParticles from "../components/diorama/SceneParticles";
-// import Tiger from "../components/diorama/Tiger";
-// import Girl from "../components/diorama/Girl";
+import Tiger from "../components/diorama/Tiger";
+import Girl from "../components/diorama/Girl";
 import { ReactComponent as Arrow } from "../assets/chevronArrow.svg";
 
 let lightColor = new Color(1, 0.2, 0.1);
@@ -42,12 +42,6 @@ let mesh = new Mesh(
 mesh.rotation.x = Math.PI * 0.5;
 mesh.position.set(1.17, 10.7, -4.1);
 mesh.scale.set(1.5, 1, 1);
-
-// function Loader() {
-//   const { active, progress, errors, item, loaded, total } = useProgress();
-//   // console.log("Hello : ", <Html>{progress} % loaded</Html>);
-//   return <Html>{progress} % loaded</Html>;
-// }
 
 const Diorama = ({ width = "100%", height = "100%" }) => {
   return (
@@ -106,9 +100,9 @@ const Diorama = ({ width = "100%", height = "100%" }) => {
             <Rocks />
             <Grass />
             <SceneParticles />
-            <Words />
+            {/* <Words /> */}
             {/* <Tiger /> */}
-            {/* <Girl /> */}
+            <Girl />
           </Float>
 
           <FloatingRocks />

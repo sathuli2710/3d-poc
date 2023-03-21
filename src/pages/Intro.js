@@ -1,23 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
+  const navigator = useNavigate();
   const routes = [
     { text: "Diorama", route: "/diorama" },
     { text: "3D Show", route: "/3d-show" },
+    { text: "Room Show", route: "/roomshow" },
   ];
   return (
     <main className="flex justify-center items-center gap-10 w-full h-full bg-black opacity-90 p-12 text-white">
-      <>
+      <section className="flex xl:max-w-[900px] overflow-x-hidden">
         {routes.map((item, idx) => (
-          <section
+          <div
             key={idx}
             className="cursor-pointer xl:w-[500px] xl:h-[500px] l:w-[400px] l:h-[400px] m:w-[300px] m:h-[300px] s:w-[100px] s:h-[100px] l:text-[45px] xl:text-[50px] xl:hover:text-[40px] l:hover:text-[60px] m:text-[30px] m:hover:text-[45px] s:text-[10px] s:hover:text-[15px] border border-pink-200 rounded-lg shadow-lg shadow-pink-100 grid place-items-center font-extrabold uppercase routeBox transition-colors ease-in-out duration-700"
-            onClick={() => window.open(item.route, "_self")}
+            onClick={() => navigator(item.route)}
           >
             {item.text}
-          </section>
+          </div>
         ))}
-      </>
+      </section>
     </main>
   );
 };
