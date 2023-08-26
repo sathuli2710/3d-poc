@@ -18,14 +18,14 @@ const Intro = () => {
           </section>
         ))}
         <div className="fixed bottom-4 text-stone-400 text-[1.2rem]">
-          Created by Abul. Click
+          Created by Abul. Click{" "}
           <a
             href="https://github.com/sathuli2710/3d-poc"
             target="_blank"
             className="text-gradient"
           >
             here
-          </a>
+          </a>{" "}
           to get the code.
         </div>
       </>
