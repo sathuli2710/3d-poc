@@ -23,7 +23,7 @@ const Words = () => {
         position={[2.35, 5.7, 0.6]}
         rotation={[0, -0.2, -0.05]}
       >
-        Ultraman
+        GateWay
         <meshStandardMaterial color={[1, 0.15, 0.1]} emissive={[1, 0.1, 0]} />
       </Text3D>
     </>

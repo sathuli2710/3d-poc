@@ -3,8 +3,6 @@ import {
   PerspectiveCamera,
   Environment,
   Float,
-  // Html,
-  // useProgress,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -26,8 +24,7 @@ import Rocks from "../components/diorama/Rocks";
 import Trees from "../components/diorama/Trees";
 import Words from "../components/diorama/Words";
 import SceneParticles from "../components/diorama/SceneParticles";
-// import Tiger from "../components/diorama/Tiger";
-// import Girl from "../components/diorama/Girl";
+import Robo from "../components/diorama/Robo";
 import { ReactComponent as Arrow } from "../assets/chevronArrow.svg";
 
 let lightColor = new Color(1, 0.2, 0.1);
@@ -107,8 +104,7 @@ const Diorama = ({ width = "100%", height = "100%" }) => {
             <Grass />
             <SceneParticles />
             <Words />
-            {/* <Tiger /> */}
-            {/* <Girl /> */}
+            <Robo />
           </Float>
 
           <FloatingRocks />

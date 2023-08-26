@@ -20,6 +20,16 @@ canvas {
   );
 }
 
+.text-gradient {
+  background: -webkit-linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* @media screen and (max-width: 767px) {
   .routeBox {
     font-size: 10px;
